@@ -1,0 +1,23 @@
+\documentclass{beamer}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\title{Git Talk}
+\author{Lukas Halbritter}
+\date{2024}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+  \begin{center}
+    \begin{tikzpicture}
+      [every node/.style={rounded corners, thick, text width=4cm, align=center}]
+      \node (history) [draw=green!50, fill=green!20] {History};
+      \node (index) [draw=blue!50, fill=blue!20, below=of history] {Staging Area (Index)};
+      \node (wd) [draw=red!50, fill=red!20, below=of index] {Working Directory};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+\end{document}
