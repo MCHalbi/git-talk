@@ -4,6 +4,13 @@
 
 \usepackage{jobrad_colors}
 
+\tikzset{
+  history/.style={draw=green!50, fill=green!20},
+  index/.style={draw=blue!50, fill=blue!20},
+  working_directory/.style={draw=red!50, fill=red!20},
+  branch/.style={draw=orange!50, fill=orange!20},
+}
+
 \title{Git Talk}
 \author{Lukas Halbritter}
 \date{2024}
@@ -15,10 +22,10 @@
 \begin{frame}
   \begin{center}
     \begin{tikzpicture}
-      [every node/.style={rounded corners, thick, text width=4cm, align=center}]
-      \node (history) [draw=green!50, fill=green!20] {History};
-      \node (index) [draw=blue!50, fill=blue!20, below=of history] {Staging Area (Index)};
-      \node (wd) [draw=red!50, fill=red!20, below=of index] {Working Directory};
+      [every node/.style={rounded corners, text width=4cm, align=center}]
+      \node (history) [history] {History};
+      \node (index) [index, below=of history] {Staging Area (Index)};
+      \node (wd) [working_directory, below=of index] {Working Directory};
     \end{tikzpicture}
   \end{center}
 \end{frame}
